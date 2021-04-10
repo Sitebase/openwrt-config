@@ -2,7 +2,7 @@
 In this repository you'll find my OpenWRT configuration.
 
 ## Hardware
-The router I've chose is the GL iNet 750s. Some of the reasons for this are the small form factor and the low power consumption (my current setup +-3W). 
+The router I've chose is the GL-AR750S. Some of the reasons for this are the small form factor and the low power consumption (my current setup +-3W). 
 Besides that it ships with OpenWRT installed out of the box.
 
 ![GL iNet 750s](hardware.jpg)
