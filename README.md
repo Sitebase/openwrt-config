@@ -45,3 +45,6 @@ This script will automatically trigger MQTT events based on buttons pressed on t
 List of the packages I'm using and the reason why:
 * luci-mod-rpc: Way to push devices statuses to Home Assistant
 * luci-app-simple-adblock: Block ads and trackers
+
+## To Do
+* Enable auto updates
