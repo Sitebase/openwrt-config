@@ -19,7 +19,7 @@ scp .profile root@${ip}:~/
 
 #ssh root@${ip} "/etc/init.d/dropbear restart"
 
-#ssh root@${ip} "opkg update && opkg install luci-app-simple-adblock luci-mod-rpc"
+ssh root@${ip} "opkg update && opkg install luci luci-ssl luci-app-simple-adblock luci-mod-rpc"
 
 #ssh root@${ip} "logger -t ${logtag} Update config"
 
@@ -31,3 +31,4 @@ ssh root@${ip} "cat /tmp/common.glconfig.config | uci -m import glconfig && uci 
 
 #ssh root@${ip} "/etc/init.d/dnsmasq restart"
 #ssh root@${ip} "/etc/init.d/odhcpd restart"
+#ssh root@${ip} "/etc/init.d/uhttpd restart" # required for SSSL install
