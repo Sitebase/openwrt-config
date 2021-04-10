@@ -48,3 +48,7 @@ List of the packages I'm using and the reason why:
 
 ## To Do
 * Enable auto updates
+* Install mounts for external antenna
+
+## Resources
+* [AR750S Hardware info](https://openwrt.org/toh/gl.inet/gl-ar750)
