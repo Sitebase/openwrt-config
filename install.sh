@@ -19,7 +19,7 @@ scp .profile root@${ip}:~/
 
 #ssh root@${ip} "/etc/init.d/dropbear restart"
 
-ssh root@${ip} "opkg update && opkg install luci luci-ssl luci-app-simple-adblock luci-mod-rpc"
+ssh root@${ip} "opkg update && opkg install gl-files-brower luci luci-app-simple-adblock"
 
 #ssh root@${ip} "logger -t ${logtag} Update config"
 
