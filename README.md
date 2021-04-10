@@ -5,7 +5,7 @@ In this repository you'll find my OpenWRT configuration.
 The router I've chose is the GL iNet 750s. Some of the reasons for this are the small form factor and the low power consumption (my current setup +-3W). 
 Besides that it ships with OpenWRT installed out of the box.
 
-![hardware.png](GL iNet 750s)
+![GL iNet 750s](hardware.png)
 
 ## Secrets
 As you might notice in some of the config files. I'm using variables for some sesitive information like MAC addresses or passwords. These are all defined as environment variables in the `.secrets` file which is encrypted using `git-crypt`. To give you an idea how this secret file looks once decrypted you can see the snippet below:
