@@ -48,6 +48,7 @@ List of the packages I'm using and the reason why:
 
 ## To Do
 * Install mounts for external antenna
+* Get SSL working for admin panel
 
 ## Resources
 * [AR750S Hardware info](https://openwrt.org/toh/gl.inet/gl-ar750)
