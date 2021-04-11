@@ -9,7 +9,7 @@ The extra benefit is that it's very hackable because it has a I2C port and some 
 ![GL iNet 750s](hardware.jpg)
 
 ## Secrets
-As you might notice in some of the config files. I'm using variables for some sesitive information like MAC addresses or passwords. These are all defined as environment variables in the `.secrets` file which is encrypted using `git-crypt`. To give you an idea how this secret file looks once decrypted you can see the snippet below:
+As you might notice in some of the config files I'm using variables for some sesitive information like MAC addresses or passwords. These are all defined as environment variables in the `.secrets` file which is encrypted using `git-crypt`. To give you an idea how this secret file looks once decrypted you can see the snippet below:
 
 ```
 export WIFI_2G_PASSWORD=passhere
