@@ -47,7 +47,6 @@ List of the packages I'm using and the reason why:
 * luci-app-simple-adblock: Block ads and trackers
 
 ## To Do
-* Enable auto updates
 * Install mounts for external antenna
 
 ## Resources
