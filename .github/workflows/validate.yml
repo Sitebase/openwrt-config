@@ -33,3 +33,4 @@ jobs:
     - name: validate config 
       run: |
         uci help
+        ls -la
