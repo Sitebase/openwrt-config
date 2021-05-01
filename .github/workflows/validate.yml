@@ -13,24 +13,24 @@ jobs:
     runs-on: ubuntu-18.04
     steps:
     - uses: actions/checkout@v2
-    - name: install required packages
+    - name: Install required packages
       run: |
         sudo apt-get update
         sudo apt-get install cmake git
-    - name: install libubox 
+    - name: Install libubox 
       run: |
         git clone http://git.nbd.name/luci2/libubox.git 
         cd libubox
         cmake -DBUILD_LUA=off
         sudo make install
-    - name: install UCI 
+    - name: Install UCI 
       run: |
         git clone https://git.openwrt.org/project/uci.git 
         cd uci
         cmake -DBUILD_LUA=off
         sudo make install
         sudo ldconfig
-    - name: validate config 
+    - name: Validate config 
       run: |
         uci help
         ls -la
