@@ -50,5 +50,8 @@ List of the packages I'm using and the reason why:
 * Install mounts for external antenna
 * Get SSL working for admin panel
 
+## Notes
+* ED25519 ssh keys are not supported out of the box so don't try to use them. [More info](https://openwrt.org/docs/guide-user/security/dropbear.public-key.auth#providing_ed25519_support)
+
 ## Resources
 * [AR750S Hardware info](https://openwrt.org/toh/gl.inet/gl-ar750)
