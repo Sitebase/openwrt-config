@@ -1,8 +1,11 @@
-# This is to run validation in the workflow
-echo "start validate $GITHUB_WORKSPACE"
-for i in *.config; do
-	uci show "${GITHUB_WORKSPACE}${i}"
-    #if ! uci show "${GITHUB_WORKSPACE}${i}" > /dev/null
-        #then echo "$i"
-    #fi
+# run validation in github workflow
+cd ${GITHUB_WORKSPACE}/config/
+for i in *; do
+	if ! uci -c "${GITHUB_WORKSPACE}/config" show "${i}" > /dev/null
+	then 
+		echo "invalid config -> $i"
+		exit 1
+	else
+		echo "valid $i"
+	fi
 done

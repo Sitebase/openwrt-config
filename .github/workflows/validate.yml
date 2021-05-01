@@ -1,8 +1,7 @@
-name: Validate OpenWRT Config
+name: Validate Config
 
 on:
   push:
-  pull_request:
 
 env:
   CI: true
@@ -32,7 +31,4 @@ jobs:
         sudo ldconfig
     - name: Validate config 
       run: |
-        uci help
-        ls -la
-        pwd
         ./validate.sh
