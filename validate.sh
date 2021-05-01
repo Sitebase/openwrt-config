@@ -9,6 +9,9 @@ uci -c "${GITHUB_WORKSPACE}" show bla
 #echo "Show all"
 #uci -P "${GITHUB_WORKSPACE}/" show bla
 
+echo "Test show common dhcp"
+uci -c "${GITHUB_WORKSPACE}" show common.dhcp
+
 echo "start validate $GITHUB_WORKSPACE"
 for i in *.config; do
 	echo "-> ${GITHUB_WORKSPACE}/${i}"
