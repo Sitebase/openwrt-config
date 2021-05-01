@@ -1,4 +1,6 @@
 # My OpenWRT Config
+[![Validate OpenWRT Config](https://github.com/Sitebase/openwrt-config/actions/workflows/validate.yml/badge.svg)](https://github.com/Sitebase/openwrt-config/actions/workflows/validate.yml)
+
 In this repository you'll find my OpenWRT configuration.
 
 ## Hardware
