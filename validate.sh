@@ -13,7 +13,7 @@ echo "Test show dhcp"
 uci -c "${GITHUB_WORKSPACE}" show dhcp
 
 echo "start validate $GITHUB_WORKSPACE"
-for i in ( bla dhcp ); do
+for i in {bla,dhcp}; do
 	if ! uci -c "${GITHUB_WORKSPACE}" show "${i}" > /dev/null
 		then echo "$i"
 	fi

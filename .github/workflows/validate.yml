@@ -32,7 +32,4 @@ jobs:
         sudo ldconfig
     - name: Validate config 
       run: |
-        uci help
-        ls -la
-        pwd
         ./validate.sh
