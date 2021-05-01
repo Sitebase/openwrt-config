@@ -18,5 +18,6 @@ for i in {bla,dhcp}; do
 		then 
 			echo "invalid config -> $i"
 			uci -c "${GITHUB_WORKSPACE}" show "${i}"
+			exit 1
 	fi
 done
