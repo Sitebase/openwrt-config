@@ -6,14 +6,14 @@ source .secrets
 
 mkdir -p dist/
 
-for f in common.* 
+for f in config/* 
 do
 	echo "parse $f"
     envsubst < $f > dist/$f 
 done
 
 # Copy required files to device
-scp dist/*.config root@${ip}:/tmp/
+scp dist/* root@${ip}:/tmp/
 scp .secrets root@${ip}:~/
 scp .profile root@${ip}:~/
 
