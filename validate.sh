@@ -1,5 +1,7 @@
 # This is to run validation in the workflow
 
+echo "Test all"
+uci show all -P "${GITHUB_WORKSPACE}"
 echo "Testing"
 uci show bla -P "${GITHUB_WORKSPACE}"
 
