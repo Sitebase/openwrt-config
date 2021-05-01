@@ -34,3 +34,4 @@ jobs:
       run: |
         uci help
         ls -la
+        pwd
