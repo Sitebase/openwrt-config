@@ -1,0 +1,37 @@
+name: Validate OpenWRT Config
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+
+env:
+  CI: true
+
+jobs:
+  validate:
+    name: "Validate Config"
+    runs-on: ubuntu-18.04
+    steps:
+    - uses: actions/checkout@v2
+    - name: install required packages
+      run: |
+        sudo apt-get update
+        sudo apt-get install cmake git
+    - name: install libubox 
+      run: |
+        git clone http://git.nbd.name/luci2/libubox.git libubox.git cd libubox.git
+        cmake -DBUILD_LUA=off
+        sudo make install
+    - name: install UCI 
+      run: |
+        git clone https://git.openwrt.org/project/uci.git uci.git cd uci.git
+        cmake -DBUILD_LUA=off
+        sudo make install
+        sudo ldconfig
+    - name: validate config 
+      run: |
+        uci help
