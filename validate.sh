@@ -12,12 +12,10 @@
 #echo "Test show dhcp"
 #uci -c "${GITHUB_WORKSPACE}" show dhcp
 
-echo "start validate"
-for i in {bla,dhcp}; do
-	if ! uci -c "${GITHUB_WORKSPACE}" show "${i}" > /dev/null
+for i in ${GITHUB_WORKSPACE}/config/*; do
+	if ! uci -c "${GITHUB_WORKSPACE}/config" show "${i}" > /dev/null
 		then 
 			echo "invalid config -> $i"
-			uci -c "${GITHUB_WORKSPACE}" show "${i}"
 			exit 1
 	fi
 done
