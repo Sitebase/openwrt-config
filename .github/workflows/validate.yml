@@ -19,12 +19,14 @@ jobs:
         sudo apt-get install cmake git
     - name: install libubox 
       run: |
-        git clone http://git.nbd.name/luci2/libubox.git cd libubox
+        git clone http://git.nbd.name/luci2/libubox.git 
+        cd libubox
         cmake -DBUILD_LUA=off
         sudo make install
     - name: install UCI 
       run: |
-        git clone https://git.openwrt.org/project/uci.git cd uci
+        git clone https://git.openwrt.org/project/uci.git 
+        cd uci
         cmake -DBUILD_LUA=off
         sudo make install
         sudo ldconfig
