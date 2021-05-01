@@ -12,7 +12,8 @@
 #echo "Test show dhcp"
 #uci -c "${GITHUB_WORKSPACE}" show dhcp
 
-for i in ${GITHUB_WORKSPACE}/config/*; do
+cd ${GITHUB_WORKSPACE}/config/
+for i in *; do
 	if ! uci -c "${GITHUB_WORKSPACE}/config" show "${i}" > /dev/null
 		then 
 			echo "invalid config -> $i"
