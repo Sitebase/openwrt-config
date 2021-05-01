@@ -3,4 +3,3 @@ package bla
 config domain 'syslog'
     option name 'syslog.sitebase.be'
     option ip '192.168.8.1'
-    opion bla 'test'
