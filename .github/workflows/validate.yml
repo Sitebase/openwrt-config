@@ -35,3 +35,4 @@ jobs:
         uci help
         ls -la
         pwd
+        ./.github/validate.sh
