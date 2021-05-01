@@ -1,7 +1,7 @@
 # This is to run validation in the workflow
 
 echo "Testing"
-uci show common.dhcp -P "${GITHUB_WORKSPACE}${i}"
+uci show bla -P "${GITHUB_WORKSPACE}"
 
 echo "start validate $GITHUB_WORKSPACE"
 for i in *.config; do
