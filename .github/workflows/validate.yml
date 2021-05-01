@@ -1,4 +1,4 @@
-name: Validate OpenWRT Config
+name: Validate Config
 
 on:
   push:
