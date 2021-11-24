@@ -4,6 +4,10 @@ config domain 'syslog'
     option name 'syslog.sitebase.be'
     option ip '192.168.8.1'
 
+config domain 'mqtt'
+    option name 'mqtt.sitebase.be'
+    option ip '192.168.8.1'
+
 config host 'homeassistant'
         option name 'homeassistant'
         option dns '1'
