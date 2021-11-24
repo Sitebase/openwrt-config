@@ -19,7 +19,7 @@ scp .profile root@${ip}:~/
 
 #ssh root@${ip} "/etc/init.d/dropbear restart"
 
-ssh root@${ip} "opkg update && opkg install gl-files-brower luci luci-app-simple-adblock"
+ssh root@${ip} "opkg update && opkg install gl-files-brower luci luci-app-simple-adblock mosquitto-ssl mosquitto-client-ssl libmosquitto-ssl"
 
 #ssh root@${ip} "logger -t ${logtag} Update config"
 
@@ -32,3 +32,7 @@ ssh root@${ip} "cat /tmp/glconfig | uci -m import glconfig && uci commit"
 #ssh root@${ip} "/etc/init.d/dnsmasq restart"
 #ssh root@${ip} "/etc/init.d/odhcpd restart"
 #ssh root@${ip} "/etc/init.d/uhttpd restart" # required for SSSL install
+
+# ensure MQTT server is configured running
+ssh root@${ip} "cat /tmp/mosquitto.conf > /etc/mosquitto/mosquitto.conf"
+ssh root@${ip} "/etc/init.d/mosquitto enable && /etc/init.d/mosquitto restart"
