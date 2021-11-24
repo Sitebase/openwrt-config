@@ -9,7 +9,7 @@ mkdir -p dist/
 for f in config/* 
 do
 	echo "parse $f"
-    envsubst < $f > dist/$f 
+    envsubst < $f > dist/$(basename $f)
 done
 
 # Copy required files to device
