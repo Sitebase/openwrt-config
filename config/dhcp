@@ -23,7 +23,7 @@ config host 'huebridge'
 config host 'phonewim'
         option name 'phone-wim'
         option dns '1'
-        option mac '$MAC_PHONE_WIM_WIFI'
+        option mac '$MAC_PHONE_PIXEL2_WIFI'
         option ip '192.168.8.230'
 
 config host 'vacuum'
