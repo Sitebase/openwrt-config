@@ -1,0 +1,4 @@
+config 'mount'
+	option	target	'/mnt/sda1'
+	option	uuid	'3765-3934'
+	option	enabled	'0'
