@@ -19,7 +19,7 @@ scp .profile root@${ip}:~/
 
 #ssh root@${ip} "/etc/init.d/dropbear restart"
 
-ssh root@${ip} "opkg update && opkg install gl-files-brower luci luci-app-simple-adblock mosquitto-ssl mosquitto-client-ssl libmosquitto-ssl rsyslog"
+ssh root@${ip} "opkg update && opkg install gl-files-brower luci luci-app-simple-adblock mosquitto-ssl mosquitto-client-ssl libmosquitto-ssl rsyslog vsftpd"
 
 #ssh root@${ip} "logger -t ${logtag} Update config"
 
@@ -36,3 +36,7 @@ ssh root@${ip} "cat /tmp/glconfig | uci -m import glconfig && uci commit"
 # ensure MQTT server is configured running
 ssh root@${ip} "cat /tmp/mosquitto.conf > /etc/mosquitto/mosquitto.conf"
 ssh root@${ip} "/etc/init.d/mosquitto enable && /etc/init.d/mosquitto restart"
+
+# ensure vsftpd running and configured
+ssh root@${ip} "cat /tmp/vsftpd.conf > /etc/vsftpd.conf"
+ssh root@${ip} "/etc/init.d/vsftpd enable && /etc/init.d/vsftpd restart"
