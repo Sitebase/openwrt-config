@@ -19,7 +19,7 @@ scp .profile root@${ip}:~/
 
 #ssh root@${ip} "/etc/init.d/dropbear restart"
 
-ssh root@${ip} "opkg update && opkg install gl-files-brower luci luci-app-simple-adblock mosquitto-ssl mosquitto-client-ssl libmosquitto-ssl"
+ssh root@${ip} "opkg update && opkg install gl-files-brower luci luci-app-simple-adblock mosquitto-ssl mosquitto-client-ssl libmosquitto-ssl rsyslog"
 
 #ssh root@${ip} "logger -t ${logtag} Update config"
 
