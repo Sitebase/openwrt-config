@@ -12,6 +12,10 @@ do
     envsubst < $f > dist/$(basename $f)
 done
 
+# Keep rsyslog file intact because it contains dollar sign strings
+# which will otherwise be removed by envsubst
+cp config/rsyslog.conf dist/
+
 # Copy required files to device
 scp dist/* root@${ip}:/tmp/
 scp .secrets root@${ip}:~/
@@ -40,3 +44,7 @@ ssh root@${ip} "/etc/init.d/mosquitto enable && /etc/init.d/mosquitto restart"
 # ensure vsftpd running and configured
 ssh root@${ip} "cat /tmp/vsftpd.conf > /etc/vsftpd.conf"
 ssh root@${ip} "/etc/init.d/vsftpd enable && /etc/init.d/vsftpd restart"
+
+# ensure rsyslog running and configured
+ssh root@${ip} "cat /tmp/rsyslog.conf > /etc/rsyslog.conf"
+ssh root@${ip} "/etc/init.d/rsyslog enable && /etc/init.d/rsyslog restart"
