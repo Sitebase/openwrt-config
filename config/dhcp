@@ -1,5 +1,9 @@
 package dhcp
 
+config dnsmasq
+    option domain 'local'
+    option local '/local/'
+
 config domain 'syslog'
     option name 'syslog.sitebase.be'
     option ip '192.168.8.1'
