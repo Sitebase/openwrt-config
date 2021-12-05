@@ -6,7 +6,7 @@ source .secrets
 
 mkdir -p dist/
 
-for f in config/* 
+for f in config/*
 do
 	echo "parse $f"
     envsubst < $f > dist/$(basename $f)
@@ -23,7 +23,7 @@ scp .profile root@${ip}:~/
 
 #ssh root@${ip} "/etc/init.d/dropbear restart"
 
-ssh root@${ip} "opkg update && opkg install gl-files-brower luci luci-app-simple-adblock mosquitto-ssl mosquitto-client-ssl libmosquitto-ssl rsyslog vsftpd"
+ssh root@${ip} "opkg update && opkg install gl-files-brower luci adblock luci-app-adblock mosquitto-ssl mosquitto-client-ssl libmosquitto-ssl rsyslog vsftpd"
 
 #ssh root@${ip} "logger -t ${logtag} Update config"
 
