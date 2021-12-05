@@ -2,7 +2,7 @@
 cd ${GITHUB_WORKSPACE}/config/
 for i in *; do
 	if ! uci -c "${GITHUB_WORKSPACE}/config" show "${i}" > /dev/null
-	then 
+	then
 		echo "invalid config -> $i"
 		exit 1
 	else

@@ -12,9 +12,8 @@ do
     envsubst < $f > dist/$(basename $f)
 done
 
-# Keep rsyslog file intact because it contains dollar sign strings
-# which will otherwise be removed by envsubst
-cp config/rsyslog.conf dist/
+# Copy service config files to dist foldes
+cp services/* dist
 
 # Copy required files to device
 scp dist/* root@${ip}:/tmp/
