@@ -1,0 +1,9 @@
+
+config network
+        option ssid 'SitebaseHotspot'
+        option key '$MOBILE_HOTSPOT_PASSWORD'
+        option disabled '0'
+        option encryption 'psk2'
+        option channel '48'
+        option device 'radio0'
+
