@@ -22,10 +22,11 @@ scp .profile root@${ip}:~/
 
 #ssh root@${ip} "/etc/init.d/dropbear restart"
 
-ssh root@${ip} "opkg update && opkg install gl-files-brower luci"
+# ssh root@${ip} "opkg update && opkg install gl-files-brower luci"
 
 #ssh root@${ip} "logger -t ${logtag} Update config"
 
+echo "Configure router"
 ssh root@${ip} "cat /tmp/dropbear | uci -m import dropbear && uci commit"
 ssh root@${ip} "cat /tmp/wireless | uci -m import wireless && uci commit"
 ssh root@${ip} "cat /tmp/dhcp | uci -m import dhcp && uci commit"
