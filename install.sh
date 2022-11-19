@@ -36,14 +36,3 @@ ssh root@${ip} "cat /tmp/glconfig | uci -m import glconfig && uci commit"
 #ssh root@${ip} "/etc/init.d/odhcpd restart"
 #ssh root@${ip} "/etc/init.d/uhttpd restart" # required for SSSL install
 
-# ensure MQTT server is configured running
-ssh root@${ip} "cat /tmp/mosquitto.conf > /etc/mosquitto/mosquitto.conf"
-ssh root@${ip} "/etc/init.d/mosquitto enable && /etc/init.d/mosquitto restart"
-
-# ensure vsftpd running and configured
-ssh root@${ip} "cat /tmp/vsftpd.conf > /etc/vsftpd.conf"
-ssh root@${ip} "/etc/init.d/vsftpd enable && /etc/init.d/vsftpd restart"
-
-# ensure rsyslog running and configured
-ssh root@${ip} "cat /tmp/rsyslog.conf > /etc/rsyslog.conf"
-ssh root@${ip} "/etc/init.d/rsyslog enable && /etc/init.d/rsyslog restart"
