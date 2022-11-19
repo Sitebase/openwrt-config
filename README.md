@@ -4,7 +4,7 @@
 In this repository you'll find my OpenWRT configuration.
 
 ## Hardware
-The router I've chose is the GL-AR750S. Some of the reasons for this are the small form factor and the low power consumption (my current setup +-3W). 
+The router I've chose is the GL-AR750S. Some of the reasons for this are the small form factor and the low power consumption (my current setup +-3W).
 Besides that it ships with OpenWRT installed out of the box.
 The extra benefit is that it's very hackable because it has a I2C port and some extra GPIO ports available.
 
@@ -51,6 +51,7 @@ List of the packages I'm using and the reason why:
 ## To Do
 * Install mounts for external antenna
 * Get SSL working for admin panel
+* Do a duplicate IP check in validate (cat config/dhcp| grep 'option ip' | sort) not sure if uci already does this
 
 ## Notes
 * ED25519 ssh keys are not supported out of the box so don't try to use them. [More info](https://openwrt.org/docs/guide-user/security/dropbear.public-key.auth#providing_ed25519_support)
